@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetFTPClient</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'app/content/main.css' %}">
+  <link rel="stylesheet" href="{% static 'app/content/icofont.css' %}">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="/"><img src="{% static 'app/images/logo.png' %}"></a>
+    </div>
+    <nav class="options-nav">
+      <p class="user-connection">u909518617@mateuszgorzanski.tk</p>
+      <a href="#" class="options-nav-arrow"><img src="{% static 'app/images/arrow-down.png' %}"></a>
+    </nav>
+  </header>
+  <main class="main">
+    <nav class="action-nav">
+      <ul class="action-menu">
+        <li><a href="#">Wyślij</a></li>
+        <li><a href="#">Nowy katalog</a></li>
+        <li><a href="#">Odśwież</a></li>
+        <li><a href="#">Usuń</a></li>
+        <li><a href="#">Zmień nazwę</a></li>
+        <li><a href="#" id="disconnect-btn">Rozłącz</a></li>
+      </ul>
+    </nav>
+    <section class="listing-section">
+      <div class="listing">
+        <table class="files-table">
+          <thead>
+            <tr>
+              <th><a href="#">#</a></th>
+              <th><a href="#">Nazwa</a></th>
+              <th><a href="#">Rozmiar</a></th>
+              <th><a href="#">Data modyfikacji</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td><td><i class="icofont icofont-folder"></i>&nbsp;...</td><td></td><td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></span></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><i class="icofont icofont-file-php"></i>&nbsp;autoload.php</td><td>4 034 KB</td><td>01.09.2017 14:18:28</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="server-log">
+        <h5 class="tab-title">Log:</h5>
+        <div class="tab-content server-log-tab" id="server-log-tab">
+          <ul class="server-log-statuses">
+            <li>Status: Połączenie nawiązanie, oczekiwanie na wiadomość powitalną...</li>
+            <li>Status: Połączenie nawiązanie, oczekiwanie na wiadomość powitalną...</li>
+            <li>Status: Połączenie nawiązanie, oczekiwanie na wiadomość powitalną...</li>
+            <li>Status: Połączenie nawiązanie, oczekiwanie na wiadomość powitalną...</li>
+            <li>Status: Połączenie nawiązanie, oczekiwanie na wiadomość powitalną...</li>
+            <li>Status: Połączenie nawiązanie, oczekiwanie na wiadomość powitalną...</li>
+            <li>Status: Połączenie nawiązanie, oczekiwanie na wiadomość powitalną...</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <aside class="details-aside">
+      <p>Test</p>
+    </aside>
+  </main>
+  <footer class="footer">
+
+  </footer>
+  {% csrf_token%}
+  {% load staticfiles %}
+  <script src="{% static 'app/scripts/jquery-3.2.1.min.js' %}"></script>
+  <script>
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+  </script>
+  <script src="{% static 'app/scripts/app.js' %}"></script>
+</body>
+</html>
